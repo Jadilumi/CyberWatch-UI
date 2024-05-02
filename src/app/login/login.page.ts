@@ -10,7 +10,7 @@ import axios from 'axios';
 })
 export class LoginPage implements OnInit {
 
-  private readonly URL = 'http://localhost:8080';
+  private readonly URL = environment.apiUrl;
 
   constructor() {
   }
