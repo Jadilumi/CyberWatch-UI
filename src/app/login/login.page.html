@@ -4,18 +4,17 @@
     <h1>CyberWatch</h1>
 
     <form id="form">
-      <ion-input class="input-letra" [(ngModel)]="userData.username" name="username" placeholder="Username"
-        color="primary">
+      <ion-input  [(ngModel)]="userData.username" name="username" placeholder="Username" color="primary">
         <img src="../../assets/icon/perfil.png" color="primary" slot="end" width="25px" height="25px"
           class="pefil_username">
       </ion-input>
-      <ion-input class="input-letra" name="senha" type="password" [(ngModel)]="userData.senha" placeholder="Senha"
-        color="primary">
+      <ion-input color="primary"  name="senha" type="password" [(ngModel)]="userData.senha" placeholder="Senha">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
       <ion-button (click)="logar()" color="primary">Entrar</ion-button>
       <a routerLink="/esqueceu-senha" class="esqueceu-link"> Esqueceu a senha?</a>
     </form>
+    
     <a routerLink="/register" class="register-link"> Quer se juntar a nós? <strong>&nbsp;Criar conta</strong></a>
   </div>
 
