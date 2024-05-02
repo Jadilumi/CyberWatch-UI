@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true" class="background">
+  <div id="header">
+    <img src="../../assets/icon/logo_1.png" />
+    <h1>CyberWatch</h1>
+
+    <form id="form">
+      <ion-input placeholder="Username">
+        <img src="../../assets/icon/perfil.png" color="primary" slot="end" width="25px" height="25px" class="pefil_username">
+      </ion-input>
+      <ion-input type="password" placeholder="Senha" color="primary">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <ion-button color="primary">Entrar</ion-button>
+      <a routerLink="/esqueceu-senha" class="esqueceu-link"> Esqueceu a senha?</a>
+    </form>
+  </div>
+  <a routerLink="/register" class="register-link"> Quer se juntar a nós? <strong>Criar conta</strong></a>
+
+  <img src="../../assets/icon/image_1.png" class="image-right">
+</ion-content>
