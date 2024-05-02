@@ -19,6 +19,9 @@
 .register-link {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  margin-top: 10px;
 }
 
 ion-content {
@@ -75,14 +78,6 @@ ion-content {
         border-radius: 10px;
         --box-shadow: none;
       }
-
-
-    }
-
-    .register-link {
-      align-items: center;
-      margin-top: 50px;
-      margin-left: 150px;
     }
   }
 }
@@ -105,6 +100,10 @@ ion-content {
 
   .image-right {
     display: none;
+  }
+
+  .register-link {
+    margin-left: 0;
   }
 
 
