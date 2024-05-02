@@ -1,15 +1,16 @@
 <ion-content [fullscreen]="true" class="background">
   <div id="header">
-    <img src="../../assets/icon/logo_1.png"/>
+    <img src="../../assets/icon/logo_1.png" />
     <h1>CyberWatch</h1>
 
     <form id="form">
-      <ion-input class="input-letra" [(ngModel)]="userData.username" name="username" placeholder="Username">
+      <ion-input class="input-letra" [(ngModel)]="userData.username" name="username" placeholder="Username"
+        color="primary">
         <img src="../../assets/icon/perfil.png" color="primary" slot="end" width="25px" height="25px"
-             class="pefil_username">
+          class="pefil_username">
       </ion-input>
       <ion-input class="input-letra" name="senha" type="password" [(ngModel)]="userData.senha" placeholder="Senha"
-                 color="primary">
+        color="primary">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
       <ion-button (click)="logar()" color="primary">Entrar</ion-button>
