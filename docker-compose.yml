@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ionic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8100:8100"
+      - "35729:35729"
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
