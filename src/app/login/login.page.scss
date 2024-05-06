@@ -1,0 +1,164 @@
+.background {
+  position: relative;
+}
+
+.image-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+ion-content {
+  overflow: hidden;
+  --background: #ffffff;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+
+#header img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-left: 120px;
+}
+
+#header h1 {
+  font-size: 26px;
+  color: #010100;
+  margin-bottom: 15px;
+  margin-left: 200px;
+}
+
+#form {
+  width: 35%;
+}
+
+ion-input input {
+  font-size: 18px;
+}
+
+ion-input label {
+  font-size: 16px;
+}
+
+ion-button {
+  margin-top: 20px;
+  height: 60px;
+  width: 100px;
+  font-size: 18px;
+  text-transform: initial;
+  border-radius: 50%;
+  --box-shadow: none;
+}
+
+.esqueceu-link {
+  position: absolute;
+  margin-top: 40px;
+  left: 500px;
+  font-size: 16px;
+}
+
+.register-link {
+  position: relative;
+  margin-top: 130px;
+  margin-left: 140px;
+  font-size: 16px;
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+
+
+  #header img {
+    margin-left: 50px;
+  }
+
+  #header h1 {
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+
+  .esqueceu-link {
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .register-link {
+    position: relative;
+    margin-top: 109px;
+    margin-left: 72px;
+  }
+
+  .image-right {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  #form{
+    width: 45%;
+  }
+  #header {
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
+  #header h1 {
+    margin-left:200px;
+  }
+
+  .esqueceu-link {
+    margin-left: -30px;
+  }
+
+  .register-link {
+    margin-top: 109px;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  #header {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 120px;
+  }
+
+  #header img {
+    margin-left: 20px;
+  }
+
+  #header h1 {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  #form {
+    width: 80%;
+  }
+
+  .image-right {
+    display: none;
+  }
+
+  .esqueceu-link {
+    position: absolute;
+    margin-left: -220px;
+    margin-top: 120px;
+  }
+
+  .register-link {
+    position: relative;
+    right: 40px;
+  }
+}
