@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://3.144.192.144:8080'
+  apiUrl: 'https://cyberwatch-backend-1.onrender.com'
 };
