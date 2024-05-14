@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Router} from '@angular/router';
 import {environment} from "../../environments/environment";
 import axios from 'axios';
 
@@ -12,7 +13,7 @@ export class LoginPage implements OnInit {
 
   private readonly URL = environment.apiUrl;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -26,7 +27,7 @@ export class LoginPage implements OnInit {
   logar() {
     axios.post(`${this.URL}/auth/login`, this.userData).then(
       response => {
-        console.log("Logou po", response.data)
+        this.router.navigateByUrl('/welcome');
       }).catch(error => {
       console.error(error);
     })

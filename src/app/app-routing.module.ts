@@ -13,7 +13,11 @@ const routes: Routes = [
   {
     path: 'esqueceu-senha',
     loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
-  }
+  },
+  { 
+    path: 'welcome', 
+    loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
 ];
 
 @NgModule({
