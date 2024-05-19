@@ -1,13 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="div-principal">
+    <div class="div-esquerda">
+      <div class="container-div-esquerda-img">
+        <img class="img-div-esquerda" src="./assets/Logo.png"/>
+      </div>
+
+      <h2 class="titulo">
+        <strong>
+          Criar Conta
+        </strong>
+      </h2>
+      <form>
+
+        <div class="container-div-esquerda-inputs">
+          <div class="div-inputs">
+            <span>Usuário</span>
+            <input type="text" placeholder="Usuário" required/>
+          </div>
+
+          <div class="div-inputs">
+            <span>Email</span>
+            <input type="text" placeholder="Email" required/>
+          </div>
+
+          <div class="div-inputs">
+            <span>Senha</span>
+            <input type="password" placeholder="Senha" required/>
+          </div>
+          <div class="div-termos">
+            <input class="check" type="checkbox">
+            <span>Aceito os termos e política de privacidade</span>
+          </div>
+          <button class="btn-login">Log in</button>
+        </div>
+      </form>
+    </div>
+    <div class="div-direita">
+      <img src="./assets/img_cadastro_direita.png">
+    </div>
+  </div>
 </ion-content>
