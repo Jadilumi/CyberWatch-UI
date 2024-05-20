@@ -1,0 +1,69 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu-header-bg {
+    height: 185px;
+    width: 350px;
+    background-color: #193E73; // Altere a cor conforme necessário
+    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+    transform: rotate(-15deg);
+    border-radius: 10px 10px 10px 50px;
+    margin-left: -18px;
+    margin-top: -50px;
+    margin-bottom: 60px;
+}
+
+.header-content {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 7px solid #000000;
+}
+
+h2 {
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.menu-items {
+    margin: 0px;
+
+
+    ion-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        color: #86979f;
+    }
+
+    ion-item {
+        padding-left: 20px;
+        margin-bottom: 50px;
+    }
+
+    .active {
+        border-left: 5px solid;
+        color: #3585EF;
+        padding-left: 15px;
+
+        ion-icon {
+            color: #3585EF;
+        }
+    }
+
+
+    .sair-icon {
+        margin-top: 350px;
+    }
+
+}

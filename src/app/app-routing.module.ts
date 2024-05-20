@@ -18,6 +18,11 @@ const routes: Routes = [
     path: 'welcome', 
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
+  {
+    path: 'denuncia',
+    loadChildren: () => import('./denuncia/denuncia.module').then( m => m.DenunciaPageModule)
+  },
+
 ];
 
 @NgModule({

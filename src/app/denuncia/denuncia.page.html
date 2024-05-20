@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>denuncia</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content">
+  <div class="login-wrapper">
+    <div class="login-form">
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime class="data-input" id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+      <!--Pode ser um dropdown-->
+      <ion-input label="Genero" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <!--Pode ser um dropdown-->
+      <ion-input label="Estado" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <!--Pode ser um dropdown-->
+      <ion-input label="Tipo de Bullying" label-placement="floating" fill="outline"
+        placeholder="Enter text"></ion-input>
+      <!--Pode ser um dropdown-->
+      <ion-input label="Relator" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <!--Pode ser um dropdown-->
+      <ion-input label="Local do Ocorrido" label-placement="floating" fill="outline"
+        placeholder="Enter text"></ion-input>
+
+      <ion-input label="Telefone" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+      <ion-input label="Nome da Vitima" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+
+      <ion-item>
+        <ion-input label="Relato" labelPlacement="stacked" placeholder="Enter text"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
