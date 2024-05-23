@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-start ion-align-items-start">
+      <ion-col size="12" size-md="6" size-lg="6">
+        <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 400;"></app-bar-chart>
+      </ion-col>
+      <!-- Gráfico para pizza e ajuste-->
+      <ion-col size="13" size-md="6">
+        <ion-col size="20" size-md="12"> <!-- Ocupará toda a largura em dispositivos menores -->
+          <app-pie-chart [pieData]="pieChartData" style="height: 400px; width: 400;"></app-pie-chart>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
