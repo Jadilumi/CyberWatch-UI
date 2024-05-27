@@ -9,15 +9,47 @@
 
 <ion-content class="ion-padding">
   <ion-grid>
-    <ion-row class="ion-justify-content-start ion-align-items-start">
-      <ion-col size="12" size-md="6" size-lg="6">
-        <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 400;"></app-bar-chart>
+    <!-- Seletor de País -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label>Selecione um País</ion-label>
+          <ion-select [(ngModel)]="selectedCountry" (ionChange)="updateChartData()">
+            <ion-select-option value="Todos">Todos</ion-select-option>
+            <ion-select-option *ngFor="let country of countries" [value]="country">{{ country }}</ion-select-option>
+          </ion-select>
+        </ion-item>
       </ion-col>
-      <!-- Gráfico para pizza e ajuste-->
-      <ion-col size="13" size-md="6">
-        <ion-col size="20" size-md="12"> <!-- Ocupará toda a largura em dispositivos menores -->
-          <app-pie-chart [pieData]="pieChartData" style="height: 400px; width: 400;"></app-pie-chart>
-        </ion-col>
+    </ion-row>
+
+    <!-- Cartões -->
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="12" size-lg="6">
+        <!--Necessario trocar esse cartão para o necessario no projeto-->
+        <app-card title="Germany Total" [value]="germanyTotal"></app-card>
+      </ion-col>
+      <ion-col size="12" size-lg="6">
+        <app-card 
+          title="Total Crimes" 
+          [value]="selectedCountry === 'Todos' ? globalTotal : calculateTotal(selectedCountry)" 
+          style="color: black;">
+        </app-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Gráficos -->
+    <ion-row class="ion-justify-content-start ion-align-items-start">
+      <ion-col size="12" size-lg="6">
+        <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 100%;"></app-bar-chart>
+      </ion-col>
+      <ion-col size="12" size-lg="6">
+        <app-pie-chart [pieData]="genderPieChartData" style="height: 400px; width: 100%;"></app-pie-chart>
+      </ion-col>
+      <ion-col size="12" size-lg="6">
+        <app-horizontal-bar-chart [chartData]="horizontalBarChartData" style="height: 400px; width: 100%;"></app-horizontal-bar-chart>
+      </ion-col>
+      <ion-col size="12" size-lg="6">
+        <app-line-chart [chartData]="lineChartData" style="height: 400px; width: 100%;"></app-line-chart>
       </ion-col>
     </ion-row>
   </ion-grid>

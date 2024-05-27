@@ -8,7 +8,10 @@ import { DashboardPage } from './dashboard.page';
 import { DashboardPageRoutingModule } from './dashboard-routing.module';
 import { BarChartComponent } from '../components/bar-chart/bar-chart.component';
 import { PieChartComponent } from '../components/pie-chart/pie-chart.component';
-
+import { CardComponent } from '../components/card/card.component';
+import { HorizontalBarChartComponent } from '../components/horizontal-bar-chart/horizontal-bar-chart.component';
+import { LineChartComponent } from '../components/line-chart/line-chart.component';
+//Classe onde é alocado todos os tipos de graficos 
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +20,7 @@ import { PieChartComponent } from '../components/pie-chart/pie-chart.component';
     NgxChartsModule,
     DashboardPageRoutingModule
   ],
-  declarations: [DashboardPage, BarChartComponent,PieChartComponent ],
+  declarations: [DashboardPage, BarChartComponent,PieChartComponent, CardComponent, HorizontalBarChartComponent, LineChartComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
