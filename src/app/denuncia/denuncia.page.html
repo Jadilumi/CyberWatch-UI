@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>denuncia</ion-title>
+    <ion-title>Cadastro de Denúncia</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -10,12 +10,17 @@
 <ion-content class="custom-content">
   <div class="login-wrapper">
     <div class="login-form">
-      <ion-datetime-button color="secondary" datetime="datetime"></ion-datetime-button>
-      <ion-modal [keepContentsMounted]="true">
-        <ng-template>
-          <ion-datetime class="data-input" id="datetime"></ion-datetime>
-        </ng-template>
-      </ion-modal>
+
+      <div class="div-ocorrido">
+        <span class="label-ocorrido">Data do Incidente</span>
+        <ion-datetime-button color="secondary" datetime="datetime"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime class="data-input" id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </div>
+
       <!--Pode ser um dropdown-->
       <ion-input class="input-color-new" label="Genero" label-placement="floating" fill="outline"
                  placeholder="Enter text"></ion-input>
