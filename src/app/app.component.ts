@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,38 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private router: Router) {}
-
-  logout(){
-    this.router.navigate(['/login]']);
+  constructor(private platform: Platform) {
+    this.initializeApp();
   }
 
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.checkDarkTheme();
+    });
+  }
+
+  toggleTheme(event: any) {
+    if (event.detail.checked) {
+      document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  checkDarkTheme() {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+      if (currentTheme === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    } else if (prefersDark.matches) {
+      document.body.classList.add('dark');
+    }
+  }
 }

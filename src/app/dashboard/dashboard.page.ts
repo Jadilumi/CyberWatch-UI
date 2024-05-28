@@ -15,11 +15,11 @@ export class DashboardPage implements OnInit {
   germanyTotal!: number;
   usaTotal!: number;
   selectedCountry: string;
-  countries: string[];
+  countries: string[] ;
   globalTotal!: number;
 
   constructor() {
-    this.countries = ['Germany', 'USA', 'France'];
+    this.countries = ['Rio de Janeiro', 'São Paulo', 'Pernambuco'];
     this.selectedCountry = 'Todos';
   }
 
@@ -44,8 +44,7 @@ export class DashboardPage implements OnInit {
       this.genderPieChartData = this.filterGenderDataByCountry(genderCrimeData, this.selectedCountry);
     }
 
-    this.germanyTotal = this.calculateTotal('Germany');
-    this.usaTotal = this.calculateTotal('USA');
+    this.germanyTotal = this.calculateGlobalTotal();
   }
 
   filterDataByCountry(data: any[], country: string): any[] {
@@ -68,7 +67,7 @@ export class DashboardPage implements OnInit {
     }, 0);
   }
 
-
+  
   calculateTotal(country: string): number {
     const countryData = this.lineChartData.find(data => data.name === country);
     return countryData ? countryData.series.reduce((total: any, item: { value: any; }) => total + item.value, 0) : 0;
