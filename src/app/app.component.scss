@@ -1,71 +1,89 @@
+/* Global Styles for Menu and Main Content */
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.menu-header-bg {
+  }
+  
+  .menu-header-bg {
     height: 185px;
     width: 350px;
-    background-color: #193E73; // Altere a cor conforme necessário
+    background-color: #193e73; // Altere a cor conforme necessário
     box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
     transform: rotate(-15deg);
     border-radius: 10px 10px 10px 50px;
     margin-left: -18px;
     margin-top: -50px;
     margin-bottom: 60px;
-}
-
-.header-content {
+  }
+  
+  .header-content {
     position: absolute;
     top: 30px;
     left: 15px;
     display: flex;
     align-items: center;
-}
-
-img {
+  }
+  
+  img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     border: 7px solid #000000;
-}
-
-h2 {
+  }
+  
+  h2 {
     font-weight: 300;
     color: #ffffff;
     letter-spacing: 1px;
-}
-
-.menu-items {
-    margin: 0px;
-
+  }
+  
+  ion-menu {
+    --background: #f0f0f0;
+    --width: 250px;
+  }
+  
+  ion-content {
+    --background: #f0f0f0;
+  }
+  
+  .menu-items {
+    margin: 0;
+  
     ion-icon {
-        width: 50px;
-        height: 50px;
-        margin-right: 20px;
-        color: #86979f;
+      color: #333;
+      margin-right: 16px;
     }
-
+  
     ion-item {
-        padding-left: 20px;
-        margin-bottom: 50px;
-        cursor: pointer;
+      padding-left: 20px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
     }
-
-    .active {
-        border-left: 5px solid;
-        color: #3585EF;
-        padding-left: 15px;
-
-        ion-icon {
-            color: #3585EF;
-        }
+  
+    ion-item[routerLinkActive='active'] {
+      border-left: 4px solid #387ef5;
+      color: #387ef5;
+  
+      ion-icon {
+        color: #387ef5;
+      }
     }
-
+  
     .sair-icon {
-        margin-top: 350px;
+      margin-top: 350px;
     }
-}
-
-.nome-rogeria {
-  margin-left: 10px;
-}
+  }
+  
+  ion-menu-button {
+    display: block;
+  }
+  
+  #main-content {
+    margin-left: 250px;
+  }
+  
+  .active {
+    border-left: 4px solid #387ef5;
+  }
+  

@@ -16,7 +16,7 @@ export class HorizontalBarChartComponent implements OnInit {
   showXAxisLabel: boolean = true;
   xAxisLabel: string = 'Crimes';
   showYAxisLabel: boolean = true;
-  yAxisLabel: string = 'Países';
+  yAxisLabel: string = 'Estados';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']

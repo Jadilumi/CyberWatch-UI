@@ -1,13 +1,13 @@
 // Dados fictícios
 export const single = [
-    { "name": "Germany", "value": 2563 },
-    { "name": "USA", "value": 452 },
-    { "name": "France", "value": 8454 }
+    { "name": "Rio de Janeiro", "value": 2563 },
+    { "name": "São Paulo", "value": 452 },
+    { "name": "Pernambuco", "value": 8454 }
 ];
 
 export const multi = [
     {
-        "name": "Germany",
+        "name": "Rio de Janeiro",
         "series": [
             { "name": "2020", "value": 6200 },
             { "name": "2021", "value": 651 },
@@ -16,7 +16,7 @@ export const multi = [
         ]
     },
     {
-        "name": "USA",
+        "name": "São Paulo",
         "series": [
             { "name": "2020", "value": 5500 },
             { "name": "2021", "value": 484 },
@@ -25,7 +25,7 @@ export const multi = [
         ]
     },
     {
-        "name": "France",
+        "name": "Pernambuco",
         "series": [
             { "name": "2020", "value": 498 },
             { "name": "2021", "value": 5459 },
@@ -37,21 +37,21 @@ export const multi = [
 
 export const genderCrimeData = [
     {
-        "country": "Germany",
+        "country": "Rio de Janeiro",
         "data": [
             { "name": "Male", "value": 600000 },
             { "name": "Female", "value": 300000 }
         ]
     },
     {
-        "country": "USA",
+        "country": "São Paulo",
         "data": [
             { "name": "Male", "value": 400000 },
             { "name": "Female", "value": 100000 }
         ]
     },
     {
-        "country": "France",
+        "country": "Pernambuco",
         "data": [
             { "name": "Male", "value": 500000 },
             { "name": "Female", "value": 220000 }
