@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
 
 @Component({
@@ -7,8 +8,12 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private platform: Platform) {
+  constructor(private platform: Platform, private router: Router) {
     this.initializeApp();
+  }
+
+  logout(){
+    this.router.navigate(['/login']);
   }
 
   initializeApp() {
