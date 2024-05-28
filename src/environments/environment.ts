@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://cyberwatch-backend-1.onrender.com'
+  apiUrl: 'https://cyberwatch-service-production.up.railway.app'
 };
 
 /*
