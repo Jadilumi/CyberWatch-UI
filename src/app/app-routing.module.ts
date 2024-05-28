@@ -18,6 +18,14 @@ const routes: Routes = [
     path: 'welcome', 
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
+  {
+    path: 'denuncia',
+    loadChildren: () => import('./denuncia/denuncia.module').then( m => m.DenunciaPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
 ];
 
 @NgModule({
