@@ -21,35 +21,42 @@
         </ion-modal>
       </div>
 
-      <!--Pode ser um dropdown-->
-      <ion-input class="input-color-new" label="Genero" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
-      <!--Pode ser um dropdown-->
-      <ion-input class="input-color-new" label="Estado" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
-      <!--Pode ser um dropdown-->
-      <ion-input class="input-color-new" label="Tipo de Bullying" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
-      <!--Pode ser um dropdown-->
-      <ion-input class="input-color-new" label="Relator" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
-      <!--Pode ser um dropdown-->
-      <ion-input class="input-color-new" label="Local do Ocorrido" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
+      <ion-input class="input-color-new" label="Genero" labelPlacement="floating" color="warning" fill="outline"
+                 [(ngModel)]="denunciaData.genero"></ion-input>
 
-      <ion-input class="input-color-new" label="Telefone" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
-      <ion-input class="input-color-new" label="Email" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
-      <ion-input class="input-color-new" label="Nome da Vitima" label-placement="floating" fill="outline"
-                 placeholder="Enter text"></ion-input>
+      <ion-input class="input-color-new" label="Estado" labelPlacement="floating" color="warning" fill="outline"
+                 [(ngModel)]="denunciaData.estado"></ion-input>
+
+      <ion-input class="input-color-new" label="Tipo de Bullying" labelPlacement="floating" color="warning"
+                 fill="outline"
+                 [(ngModel)]="denunciaData.tipoDeBullying"></ion-input>
+
+      <ion-input class="input-color-new" label="Relator" labelPlacement="floating" color="warning" fill="outline"
+                 [(ngModel)]="denunciaData.relator"></ion-input>
+
+      <ion-input class="input-color-new" label="Local do Ocorrido" labelPlacement="floating" color="warning"
+                 fill="outline"
+                 [(ngModel)]="denunciaData.localDoOcorrido"></ion-input>
+
+      <ion-input class="input-color-new" label="Telefone" labelPlacement="floating" color="warning" fill="outline"
+                 [(ngModel)]="denunciaData.telefone"></ion-input>
+
+      <ion-input class="input-color-new" label="Email" labelPlacement="floating" color="warning" fill="outline"
+                 [(ngModel)]="denunciaData.email"></ion-input>
+
+      <ion-input class="input-color-new" label="Nome da Vitima" labelPlacement="floating" color="warning" fill="outline"
+                 [(ngModel)]="denunciaData.nomeDaVitima"></ion-input>
+
 
     </div>
-    <ion-textarea fill="outline" class="input-relato" label="Relato" labelPlacement="floating"></ion-textarea>
+    <ion-textarea color="warning" fill="outline" class="input-relato" label="Relato"
+                  [(ngModel)]="denunciaData.relato" labelPlacement="floating"></ion-textarea>
   </div>
 
   <div class="btn-cadastro">
-    <ion-button color="secondary">Cadastrar Denúncia</ion-button>
+    <ion-button id="present-alert" color="secondary">Cadastrar Denúncia</ion-button>
+    <ion-alert trigger="present-alert" class="custom-alert" header="Você tem certeza?"
+               [buttons]="alertButtons"></ion-alert>
   </div>
 </ion-content>
 
