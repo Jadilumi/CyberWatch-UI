@@ -1,13 +1,13 @@
 // Dados fictícios
 export const single = [
-    { "name": "Rio de Janeiro", "value": 2563 },
-    { "name": "São Paulo", "value": 452 },
-    { "name": "Pernambuco", "value": 8454 }
+    { "name": "Nassau - Bloco A", "value": 2563 },
+    { "name": "Nassau - Bloco B", "value": 452 },
+    { "name": "Nassau - Bloco C", "value": 8454 }
 ];
 
 export const multi = [
     {
-        "name": "Rio de Janeiro",
+        "name": "Nassau - Bloco A",
         "series": [
             { "name": "2020", "value": 6200 },
             { "name": "2021", "value": 651 },
@@ -16,7 +16,7 @@ export const multi = [
         ]
     },
     {
-        "name": "São Paulo",
+        "name": "Nassau - Bloco B",
         "series": [
             { "name": "2020", "value": 5500 },
             { "name": "2021", "value": 484 },
@@ -25,7 +25,7 @@ export const multi = [
         ]
     },
     {
-        "name": "Pernambuco",
+        "name": "Nassau - Bloco C",
         "series": [
             { "name": "2020", "value": 498 },
             { "name": "2021", "value": 5459 },
@@ -37,24 +37,24 @@ export const multi = [
 
 export const genderCrimeData = [
     {
-        "country": "Rio de Janeiro",
+        "country": "Nassau - Bloco A",
         "data": [
-            { "name": "Male", "value": 600000 },
-            { "name": "Female", "value": 300000 }
+            { "name": "Homens", "value": 600000 },
+            { "name": "Mulheres", "value": 300000 }
         ]
     },
     {
-        "country": "São Paulo",
+        "country": "Nassau - Bloco B",
         "data": [
-            { "name": "Male", "value": 400000 },
-            { "name": "Female", "value": 100000 }
+            { "name": "Homens", "value": 400000 },
+            { "name": "Mulheres", "value": 100000 }
         ]
     },
     {
-        "country": "Pernambuco",
+        "country": "Nassau - Bloco C",
         "data": [
-            { "name": "Male", "value": 500000 },
-            { "name": "Female", "value": 220000 }
+            { "name": "Homens", "value": 500000 },
+            { "name": "Mulheres", "value": 220000 }
         ]
     }
 ];

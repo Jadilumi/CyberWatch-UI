@@ -19,7 +19,7 @@ export class DashboardPage implements OnInit {
   globalTotal!: number;
 
   constructor() {
-    this.countries = ['Rio de Janeiro', 'São Paulo', 'Pernambuco'];
+    this.countries = ['Nassau - Bloco A', 'Nassau - Bloco B', 'Nassau - Bloco C'];
     this.selectedCountry = 'Todos';
   }
 
@@ -67,7 +67,7 @@ export class DashboardPage implements OnInit {
     }, 0);
   }
 
-  
+
   calculateTotal(country: string): number {
     const countryData = this.lineChartData.find(data => data.name === country);
     return countryData ? countryData.series.reduce((total: any, item: { value: any; }) => total + item.value, 0) : 0;
@@ -77,7 +77,7 @@ export class DashboardPage implements OnInit {
 
   //Grafico de pizza por Genero
   aggregateGenderData(data: any[]): any[] {
-    const aggregatedData: { [key: string]: number } = { Male: 0, Female: 0 };
+    const aggregatedData: { [key: string]: number } = { Homens: 0, Mulheres: 0 };
 
     data.forEach(countryData => {
       countryData.data.forEach((genderData: { name: string | number; value: number; }) => {
