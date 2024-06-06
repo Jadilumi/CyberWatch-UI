@@ -27,7 +27,7 @@ export class LoginPage implements OnInit {
   logar() {
     axios.post(`${this.URL}/auth/login`, this.userData).then(
       response => {
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigateByUrl('/welcome');
       }).catch(error => {
       console.error(error);
     })
