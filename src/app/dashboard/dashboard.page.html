@@ -9,7 +9,7 @@
 
 <ion-content class="ion-padding">
   <ion-grid>
-    <!-- Seletor de País -->
+    <!-- Seletor de Instituição -->
     <ion-row>
       <ion-col size="12">
         <ion-item>
@@ -25,7 +25,7 @@
     <!-- Cartões -->
     <ion-row class="ion-justify-content-center ion-align-items-center">
       <ion-col size="12" size-lg="6">
-        <!--Necessario trocar esse cartão para o necessario no projeto-->
+        <!--Necessario trocar esse cartão para o necessário no projeto-->
         <app-card title="Bullying Total" [value]="germanyTotal"></app-card>
       </ion-col>
       <ion-col size="12" size-lg="6">
@@ -40,11 +40,12 @@
     <!-- Gráficos -->
     <ion-row class="ion-justify-content-start ion-align-items-start">
       <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
-        <div title="adhskajhsd">
+        <p style="text-align: center;">Representação da Incidência de Bullying por Bloco
           <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 100%;"></app-bar-chart>
-        </div>
+        </p>
       </ion-col>
       <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
+        <p style="text-align: center;">Tipos de Bullying: Uma Análise em Pizza</p>
         <app-pie-chart [pieData]="genderPieChartData" style="height: 400px; width: 100%;"></app-pie-chart>
       </ion-col>
       <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
