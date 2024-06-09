@@ -13,10 +13,12 @@
     <ion-row>
       <ion-col size="12">
         <ion-item>
-          <ion-label>Selecione uma Instituição</ion-label>
-          <ion-select [(ngModel)]="selectedCountry" (ionChange)="updateChartData()">
+          <ion-label>Selecione um Estado</ion-label>
+          <ion-select [(ngModel)]="selectedState" (ionChange)="onSelectState($event.target.value)">
             <ion-select-option value="Todos">Todos</ion-select-option>
-            <ion-select-option *ngFor="let country of countries" [value]="country">{{ country }}</ion-select-option>
+            <ion-select-option value="Bloco A">Bloco A</ion-select-option>
+            <ion-select-option value="Bloco B">Bloco B</ion-select-option>
+            <ion-select-option value="Bloco C">Bloco C</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
@@ -24,37 +26,34 @@
 
     <!-- Cartões -->
     <ion-row class="ion-justify-content-center ion-align-items-center">
-      <ion-col size="12" size-lg="6">
-        <!--Necessario trocar esse cartão para o necessário no projeto-->
-        <app-card title="Bullying Total" [value]="germanyTotal"></app-card>
-      </ion-col>
+      <!--
       <ion-col size="12" size-lg="6">
         <app-card
           title="Total de Bullying"
-          [value]="selectedCountry === 'Todos' ? globalTotal : calculateTotal(selectedCountry)"
+          [value]="selectedState === 'Todos' ? globalTotal : calculateTotal(selectedState)"
           style="color: black;">
         </app-card>
       </ion-col>
+    -->
     </ion-row>
 
     <!-- Gráficos -->
     <ion-row class="ion-justify-content-start ion-align-items-start">
+
       <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
-        <p style="text-align: center;">Representação da Incidência de Bullying por Bloco
-          <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 100%;"></app-bar-chart>
-        </p>
+        <p style="text-align: center;">Número de Incidentes de Bullying por Bloco</p>
+        <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 100%;"></app-bar-chart>
       </ion-col>
       <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
         <p style="text-align: center;">Tipos de Bullying: Uma Análise em Pizza</p>
-        <app-pie-chart [pieData]="genderPieChartData" style="height: 400px; width: 100%;"></app-pie-chart>
+        <app-pie-chart [pieData]="pieChartData" style="height: 400px; width: 100%;"></app-pie-chart>
       </ion-col>
       <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
-        <app-horizontal-bar-chart [chartData]="horizontalBarChartData"
-                                  style="height: 400px; width: 100%;"></app-horizontal-bar-chart>
+        <p style="text-align: center;">Número de Incidentes de Bullying por Tipo ao Longo dos Meses</p>
+        <app-line-chart [lineChartData]="lineChartData" style="height: 400px; width: 100%;"></app-line-chart>
       </ion-col>
-      <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
-        <app-line-chart [chartData]="lineChartData" style="height: 400px; width: 100%;"></app-line-chart>
-      </ion-col>
+
+
     </ion-row>
   </ion-grid>
 </ion-content>

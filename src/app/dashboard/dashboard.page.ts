@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { single, multi, genderCrimeData, allData } from '../components/data';
+import { allData } from '../components/data';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,129 +7,120 @@ import { single, multi, genderCrimeData, allData } from '../components/data';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  barChartData!: any[];
-  pieChartData!: any[];
-  horizontalBarChartData!: any[];
-  lineChartData!: any[];
-  genderPieChartData!: any[];
-  germanyTotal!: number;
-  usaTotal!: number;
-  selectedCountry: string;
-  countries: string[];
-  blocos!: string[];
-  globalTotal!: number;
+  pieChartData: any[];
+  barChartData: any[];
+  lineChartData: any[];
+  selectedState: string = 'Todos';
+
+  states: string[] = ['Bloco A', 'Bloco B', 'Bloco C', 'Todos']; 
 
   constructor() {
-    this.countries = ['Bloco A', 'Bloco B', 'Bloco C'];
-    this.selectedCountry = 'Todos';
+    this.barChartData = [];
+    this.pieChartData = [];
+    this.lineChartData = [];
   }
 
   ngOnInit() {
     this.updateChartData();
   }
 
+  // Método para atualizar os dados do gráfico
   updateChartData() {
-    if (this.selectedCountry === 'Todos') {
-      console.log('Entrando no modo "Todos"');
-      this.barChartData = this.aggregateBullyingByBloco(allData);
-      this.pieChartData = single;
-      this.horizontalBarChartData = single;
-      this.lineChartData = multi;
-      this.genderPieChartData = this.aggregateBullyingTypeData(allData);
-    } else {
-      console.log('Entrando no modo selecionado:', this.selectedCountry);
-      this.globalTotal = 0;
-
-      const blocoData = allData.filter(item => item.estado === this.selectedCountry);
-      this.barChartData = this.aggregateBullyingByBloco(blocoData);
-
-
-      this.horizontalBarChartData = this.filterDataByCountry(allData, this.selectedCountry);
-      this.lineChartData = this.filterMultiDataByCountry(allData, this.selectedCountry);
-      this.genderPieChartData = this.filterBullyingDataByLocal(allData, this.selectedCountry);
+    let filteredData = allData; 
+    if (this.selectedState !== 'Todos') {
+      // Filtrar os dados para incluir apenas os do estado selecionado
+      filteredData = allData.filter(entry => entry.estado === this.selectedState);
     }
 
-    console.log('Dados atualizados para gráfico de pizza:', this.genderPieChartData);
-    this.germanyTotal = this.calculateGlobalTotal();
+    // Processar os dados para obter a distribuição dos tipos de bullying
+    this.pieChartData = this.aggregateBullyingTypeData(filteredData);
+    this.barChartData = this.aggregateIncidentsByBlock(filteredData);
+    this.lineChartData = this.aggregateIncidentsByMonthAndType(filteredData);
   }
 
-
-  filterDataByCountry(data: any[], bloco: string): any[] {
-    return data.filter(item => item.estado === bloco);
-  }
-
-  filterMultiDataByCountry(data: any[], country: string): any[] {
-    return data.filter(item => item.name === country);
-  }
-
-  filterBullyingDataByLocal(data: any[], bloco: string): any[] {
-    const filteredData = data.filter(item => item.estado === bloco);
-    console.log('Filtrando tipos de bullying pelo local', bloco, ':', filteredData);
-    const result = this.aggregateBullyingTypeData(filteredData);
-    console.log('Resultado agregado para tipos de bullying no bloco', bloco, ':', result);
-    return result;
-  }
-
-  calculateGlobalTotal(): number {
-    return this.lineChartData.reduce((total, countryData) => {
-      return total + countryData.series.reduce((countryTotal: any, item: { value: any; }) => countryTotal + item.value, 0);
-    }, 0);
-  }
-
-  calculateTotal(bloco: string): number {
-    const blocoData = this.lineChartData.find(data => data.name === bloco);
-    return blocoData ? blocoData.series.reduce((total: any, item: { value: any; }) => total + item.value, 0) : 0;
-  }
-
-  // Gráfico de pizza por Gênero
+  // Método para processar os dados e obter a distribuição dos tipos de bullying
   aggregateBullyingTypeData(data: any[]): any[] {
     const aggregatedData: { [key: string]: number } = {
       "Físico": 0,
       "Verbal": 0,
       "Virtual": 0,
-      "Social": 0
+      "Social": 0,
+      "PSICOLÓGICO": 0
+
     };
+
+    // Contar o número de incidentes para cada tipo de bullying
     data.forEach(entry => {
       if (entry.tipoBullying in aggregatedData) {
         aggregatedData[entry.tipoBullying]++;
       } else {
-        console.error("Entrada de daados invalida aquiii!!!", entry);
-
+        console.error("Tipo de bullying inválido:", entry.tipoBullying);
       }
     });
 
+    // Converter os dados para o formato esperado pelo gráfico de pizza
     const result = Object.keys(aggregatedData).map(key => ({
       name: key,
       value: aggregatedData[key]
     }));
-    console.log("Entrando nos dados de aggregateBullyingTypeData", result);
+
     return result;
   }
 
-  // Gráfico de barras por Bloco
-  aggregateBullyingByBloco(data: any[]): any[] {
-    const aggregatedDataBloco: { [key: string]: number } = {
+  aggregateIncidentsByBlock(data: any[]): any[] {
+    const aggregatedData: { [key: string]: number } = {
       "Bloco A": 0,
       "Bloco B": 0,
-      "Bloco C": 0,
+      "Bloco C": 0
     };
 
+    // Contar o número de incidentes para cada bloco
     data.forEach(entry => {
-      if (aggregatedDataBloco[entry.estado] !== undefined) {
-        aggregatedDataBloco[entry.estado]++;
+      if (entry.estado in aggregatedData) {
+        aggregatedData[entry.estado]++;
       }
     });
 
-    const result = Object.keys(aggregatedDataBloco).map(key => ({
+    // Converter os dados para o formato esperado pelo gráfico de barras
+    const result = Object.keys(aggregatedData).map(key => ({
       name: key,
-      value: aggregatedDataBloco[key]
+      value: aggregatedData[key]
     }));
 
     return result;
   }
 
-  onSelectBloco(bloco: string){
-    this.selectedCountry = bloco;
-    this.updateChartData();
+  aggregateIncidentsByMonthAndType(data: any[]): any[] {
+    const incidentsByMonthAndType: { [month: string]: { [type: string]: number } } = {};
+
+    data.forEach(entry => {
+      const date = new Date(entry.dia);
+      const month = date.toLocaleString('default', { month: 'long' });
+      const type = entry.tipoBullying;
+
+      if (!incidentsByMonthAndType[month]) {
+        incidentsByMonthAndType[month] = { "Físico": 0, "Verbal": 0, "Virtual": 0, "Social": 0 };
+      }
+      incidentsByMonthAndType[month][type]++;
+    });
+
+    // Prepare data for ngx-charts
+    const result: any[] = [];
+    const bullyingTypes = ["Físico", "Verbal", "Virtual", "Social", "PSICOLOGICO"];
+
+    bullyingTypes.forEach(type => {
+      const seriesData = Object.keys(incidentsByMonthAndType).map(month => ({
+        name: month,
+        value: incidentsByMonthAndType[month][type] || 0
+      }));
+      result.push({ name: type, series: seriesData });
+    });
+
+    return result;
+  }
+  // Método para lidar com a seleção de um estado
+  onSelectState(state: string) {
+    this.selectedState = state;
+    this.updateChartData(); // Atualizar os dados do gráfico ao selecionar um estado
   }
 }
