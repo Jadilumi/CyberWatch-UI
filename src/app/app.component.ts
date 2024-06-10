@@ -42,9 +42,4 @@ export class AppComponent {
       document.body.classList.add('dark');
     }
   }
-
-  logout() {
-  
-    this.router.navigate(['/login']);
-  }
 }
