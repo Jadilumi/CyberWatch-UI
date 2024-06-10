@@ -8,15 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HorizontalBarChartComponent implements OnInit {
   @Input() chartData: any;
 
-
   // options
   showXAxis: boolean = true;
   showYAxis: boolean = true;
   showLegend: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Crimes';
+  xAxisLabel: string = 'Tipo de Bullying';
   showYAxisLabel: boolean = true;
-  yAxisLabel: string = 'Estados';
+  yAxisLabel: string = 'Status da Denúncia';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']

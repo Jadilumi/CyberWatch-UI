@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-menu menuId="main-menu" contentId="main">
+  <ion-menu menuId="main-menu" contentId="main"  side="start" type="overlay">
     <ion-content>
       <div class="menu-header-bg"></div>
       <div class="header-content">
@@ -20,7 +20,7 @@
           <ion-icon class="location-icon" name="location"></ion-icon>Localização
         </ion-item>
         <!--Colocar o logout ao usurio determinado logar-->
-        <ion-item class="sair-icon" >
+        <ion-item class="sair-icon" (click)="logout()">
           <ion-icon name="exit-outline"></ion-icon>Sair
         </ion-item>
       </ion-list>
