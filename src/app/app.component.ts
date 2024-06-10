@@ -8,8 +8,13 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private platform: Platform, private router: Router ) {
+ constructor(private platform: Platform, private router: Router ) {
+
     this.initializeApp();
+  }
+
+  logout(){
+    this.router.navigate(['/login']);
   }
 
   initializeApp() {
