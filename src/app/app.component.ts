@@ -13,9 +13,6 @@ export class AppComponent {
     this.initializeApp();
   }
 
-  logout(){
-    this.router.navigate(['/login']);
-  }
 
   initializeApp() {
     this.platform.ready().then(() => {
