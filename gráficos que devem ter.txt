@@ -1,0 +1,31 @@
+Gráfico de Pizza (Pizza Chart): OK
+
+    Use para mostrar a distribuição de tipos de bullying (físico, verbal, virtual, social) nos incidentes relatados.
+    Isso pode destacar quais tipos de bullying são mais prevalentes.
+
+Gráfico de Barras (Bar Chart): OK
+
+    Represente o número de incidentes de bullying por "BLOCO"
+    Isso pode ajudar a identificar se há "BLOCO" com uma incidência significativamente maior ou menor de casos de bullying em comparação com outros.
+
+Gráfico de Linhas (Line Chart): OK
+
+    Número de Incidentes de Bullying por Tipo ao Longo dos Meses
+    Este título descreve claramente que o gráfico mostra a quantidade de incidentes de bullying, categorizados por tipo, e como esses incidentes se distribuem ao longo dos meses.
+
+//Gráfico de Dispersão (Scatter Plot):
+
+    Use o horário do incidente (hora do dia) versus o tipo de bullying.
+    Isso pode ajudar a identificar se certos tipos de bullying são mais comuns em determinados momentos do dia.
+
+Gráfico de Barras Empilhadas (Stacked Bar Chart): A FAZER
+
+    Compare o status da denúncia (aberta, investigação, fechada) em relação ao tipo de bullying.
+    Isso pode revelar como os diferentes tipos de bullying estão sendo tratados após serem relatados.
+
+//Gráfico de Rosca (Donut Chart):
+
+    Exiba a distribuição de gênero das vítimas de bullying.
+    Isso pode ajudar a entender se há disparidades de gênero significativas na incidência de bullying.
+
+nosso dashboard tem /\

@@ -1,0 +1,270 @@
+.home-content {
+    --background: #f8f9fa;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    /* Ajuste para ocupar a altura inteira da tela */
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #193E73, #3585EF);
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.about-section {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff, #e9ecef);
+}
+
+.about-section ion-grid {
+    align-items: center;
+}
+
+.about-section h2 {
+    color: #193E73;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.vision-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+.vision-section h2 {
+    color: #193E73;
+    margin-bottom: 20px;
+}
+
+.vision-section p {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.impact-section {
+    padding: 40px 20px;
+    background: #e9ecef;
+    text-align: center;
+}
+
+.impact-section h2 {
+    color: #193E73;
+    margin-bottom: 20px;
+}
+
+.impact-card {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.impact-icon {
+    font-size: 48px;
+    color: #193E73;
+    margin-bottom: 10px;
+}
+
+.impact-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.impact-description {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.features-section {
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.features-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #193E73;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: #193E73;
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.testimonials-section {
+    padding: 40px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 20px;
+    color: #193E73;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial-card {
+    flex: 1;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    color: #193E73;
+}
+
+
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.team-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.team-section h2 {
+    color: #193E73;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    margin: 20px;
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #193E73;
+}
+
+.team-member-linkedin {
+    color: #3585EF;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.team-member-linkedin:hover {
+    color: #193E73;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

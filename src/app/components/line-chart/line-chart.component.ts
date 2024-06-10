@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { multi } from '../data'; // Ajuste o caminho conforme necessário
 
 @Component({
   selector: 'app-line-chart',
@@ -7,7 +6,7 @@ import { multi } from '../data'; // Ajuste o caminho conforme necessário
   styleUrls: ['./line-chart.component.scss']
 })
 export class LineChartComponent implements OnInit {
-  @Input() chartData: any[] = [];
+  @Input() lineChartData: any[] = [];
 
   legend: boolean = true;
   showLabels: boolean = true;
@@ -16,10 +15,9 @@ export class LineChartComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Data';
-  yAxisLabel: string = 'Bullying';
+  xAxisLabel: string = 'Mês';
+  yAxisLabel: string = 'Número de Incidentes';
   timeline: boolean = true;
-
 
   ngOnInit() {
   }
