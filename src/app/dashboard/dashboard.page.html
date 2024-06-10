@@ -52,31 +52,24 @@
       </ion-row>
     </ion-grid>
 
-    <!-- Gráficos -->
+   <!-- Gráficos -->
     <ion-row class="ion-justify-content-start ion-align-items-start">
-      <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
+      <ion-col size="12" size-md="12" size-lg="6">
         <p style="text-align: center;">Número de Incidentes de Bullying por Bloco</p>
         <app-bar-chart [chartData]="barChartData" style="height: 400px; width: 100%;"></app-bar-chart>
       </ion-col>
-      <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
+      <ion-col size="12" size-md="12" size-lg="6">
         <p style="text-align: center;">Distribuição de Incidentes de Bullying por Tipo</p>
         <app-pie-chart [pieData]="pieChartData" style="height: 400px; width: 100%;"></app-pie-chart>
       </ion-col>
-      <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
+      <ion-col size="12" size-md="12" size-lg="6">
         <p style="text-align: center;">Número de Incidentes de Bullying por Tipo ao Longo dos Meses</p>
         <app-line-chart [lineChartData]="lineChartData" style="height: 400px; width: 100%;"></app-line-chart>
       </ion-col>
-      <ion-col size="12" size-lg="6" size-xs="12" size-md="12">
+      <ion-col size="12" size-md="12" size-lg="6">
         <p style="text-align: center;">Quantidade de Incidentes de Bullying por Status da Denúncia</p>
-        <app-horizontal-bar-chart [chartData]="stackedBarChartData"
-          style="height: 400px; width: 100%;"></app-horizontal-bar-chart>
+        <app-horizontal-bar-chart [chartData]="stackedBarChartData" style="height: 400px; width: 100%;"></app-horizontal-bar-chart>
       </ion-col>
-
-      <!--<ion-col size="12" size-lg="6" size-xs="12" size-md="12">
-        <p style="text-align: center;">Mapa de Calor dos Incidentes de Bullying por Mês e Tipo de Bullying</p>
-        <app-heatmap [heatmapData]="heatmapData" style="height: 400px; width: 100%;"></app-heatmap>
-      </ion-col>
-    -->
     </ion-row>
   </ion-grid>
 </ion-content>
