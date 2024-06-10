@@ -1,13 +1,204 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>logged</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title style="text-align: center; margin-left: 100px;">CyberWatch</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/dashboard">Dashboard</ion-button>
+      <ion-button href="/denuncia">Denuncias</ion-button>
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">welcome</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="home-content">
+  <!-- Seção Hero -->
+  <div class="hero-section">
+    <img src="../../assets/icon/logo_1.png" alt="Logo" class="hero-logo">
+    <h1 class="hero-title">Bem-vindo ao CyberWatch</h1>
+    <p class="hero-subtitle">Monitorando e combatendo o bullying em tempo real</p>
+  </div>
+
+  <!-- Seção Sobre o Projeto -->
+  <section class="about-section">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <h2>Sobre o Projeto</h2>
+          <p>O CyberWatch é uma plataforma inovadora dedicada a identificar e combater o bullying, especialmente no
+            ambiente escolar. Nosso objetivo é criar um espaço seguro onde denúncias de bullying possam ser feitas de
+            forma rápida e anônima, permitindo uma ação rápida e eficaz.</p>
+          <p>Queremos transformar escolas em locais mais seguros e acolhedores para todos os alunos. Acreditamos que,
+            através da conscientização e da ação, podemos reduzir significativamente os casos de bullying e ajudar as
+            vítimas a se sentirem mais protegidas.</p>
+          <p>Nosso projeto oferece ferramentas de monitoramento em tempo real, relatórios detalhados e suporte contínuo
+            para garantir que cada denúncia seja tratada com a seriedade que merece. Junte-se a nós nessa missão de
+            criar um futuro melhor para nossas crianças e jovens.</p>
+        </ion-col>
+        <ion-col size="12" size-md="6" size-lg="6">
+          <img src="../../assets/Projeto-de-arquitetura-etapas-do-projeto-como-cobrar-e-como-fazer-2-1024x576.webp"
+            alt="About Image" class="about-image">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+
+  <!-- Seção Recursos -->
+  <section class="features-section">
+    <h2>Serviços</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4">
+          <div class="feature-card">
+            <ion-icon name="shield-checkmark-outline" class="feature-icon"></ion-icon>
+            <h3 class="feature-title">Segurança</h3>
+            <p class="feature-description">Protegemos a identidade dos denunciantes para garantir a segurança de todos.
+            </p>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <a href="/denuncia" class="feature-link" style="text-decoration: none;">
+            <div class="feature-card">
+              <ion-icon name="chatbubble-ellipses-outline" class="feature-icon"></ion-icon>
+              <h3 class="feature-title">Fácil Denúncia</h3>
+              <p class="feature-description">Faça denúncias de forma rápida e intuitiva através da nossa plataforma.</p>
+            </div>
+          </a>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <a href="/dashboard" class="feature-link" style="text-decoration: none;">
+            <div class="feature-card">
+              <ion-icon name="analytics-outline" class="feature-icon"></ion-icon>
+              <h3 class="feature-title">Monitoramento</h3>
+              <p class="feature-description">Acompanhe o progresso das denúncias e as ações tomadas.</p>
+            </div>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Seção Impacto do Bullying -->
+  <section class="bullying-impact-section">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <img src="../../assets/bullying.webp" alt="Impact Image" class="impact-image">
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <h2>Impacto do Bullying na Sociedade</h2>
+          <p>O bullying é um problema grave que afeta milhões de jovens em todo o mundo. Ele pode causar danos
+            emocionais e psicológicos duradouros, impactando negativamente a autoestima, o desempenho escolar e o
+            bem-estar geral das vítimas.</p>
+          <p>Estudos mostram que o bullying pode levar a consequências severas, como depressão, ansiedade e, em casos
+            extremos, pensamentos suicidas. É crucial que medidas eficazes sejam tomadas para identificar e lidar com o
+            bullying de forma proativa.</p>
+          <p>O CyberWatch foi criado para ajudar a combater esse problema, fornecendo às escolas e comunidades as
+            ferramentas necessárias para monitorar, prevenir e responder rapidamente aos casos de bullying.</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Seção Nossos Impactos -->
+  <section class="impact-section">
+    <h2>Nossos Impactos</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4">
+          <div class="impact-card">
+            <ion-icon name="people-outline" class="impact-icon"></ion-icon>
+            <h3 class="impact-title">50k+</h3>
+            <p class="impact-description">Denúncias Registradas</p>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <div class="impact-card">
+            <ion-icon name="school-outline" class="impact-icon"></ion-icon>
+            <h3 class="impact-title">200+</h3>
+            <p class="impact-description">Escolas Parceiras</p>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <div class="impact-card">
+            <ion-icon name="thumbs-up-outline" class="impact-icon"></ion-icon>
+            <h3 class="impact-title">95%</h3>
+            <p class="impact-description">Satisfação dos Usuários</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Seção Nosso Compromisso -->
+  <section class="vision-section">
+    <h2>Nosso Compromisso</h2>
+    <p>No CyberWatch, estamos comprometidos em promover a segurança e o bem-estar de todos os alunos. Acreditamos que
+      cada criança tem o direito de estudar em um ambiente livre de medo e intimidação. Nossa visão é um mundo onde o
+      bullying é coisa do passado, e onde todos os alunos podem se concentrar em aprender e crescer.</p>
+    <p>Estamos constantemente aprimorando nossas tecnologias e métodos para garantir que nossos usuários tenham acesso
+      às melhores ferramentas possíveis. Com uma abordagem proativa
+      , trabalhamos lado a lado com escolas e comunidades
+      para implementar estratégias eficazes de prevenção e intervenção.</p>
+  </section>
+
+<!-- Seção Depoimentos -->
+<section class="testimonials-section">
+  <h2>Depoimentos</h2>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <p>"O CyberWatch ajudou nossa escola a criar um ambiente mais seguro e acolhedor."</p>
+      <h3>- Diretora Maria</h3>
+    </div>
+    <div class="testimonial-card">
+      <p>"Graças ao CyberWatch, consegui denunciar um caso de bullying sem medo."</p>
+      <h3>- Aluno João</h3>
+    </div>
+    <div class="testimonial-card">
+      <p>"A plataforma é fácil de usar e realmente faz a diferença."</p>
+      <h3>- Professora Ana</h3>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Seção Integrantes -->
+  <section class="team-section">
+    <h2>Integrantes</h2>
+    <div class="team-members">
+      <!-- Membro 1 -->
+      <div class="team-member">
+        <img src="../../assets/1702490934338.jpg" alt="Foto de Membro 1" class="team-member-photo">
+        <h3 class="team-member-name">Lucas Rodrigues</h3>
+        <a href="https://www.linkedin.com/in/lucas-crespo-rodrigues-3a1214203/"
+          class="team-member-linkedin">LinkedIn</a>
+      </div>
+
+      <!-- Membro 2 -->
+      <div class="team-member">
+        <img src="../../assets/1647688523999.jpg" alt="Foto de Membro 2" class="team-member-photo">
+        <h3 class="team-member-name">José Milton</h3>
+        <a href="https://www.linkedin.com/in/jose-milton-de-oliveira-neto-102089220/"
+          class="team-member-linkedin">LinkedIn</a>
+      </div>
+
+      <!-- Membro 3 -->
+      <div class="team-member">
+        <img src="../../assets/1700439097936.jpg" alt="Foto de Membro 3" class="team-member-photo">
+        <h3 class="team-member-name">Jailton Junior</h3>
+        <a href="https://www.linkedin.com/in/jailton-junior/" class="team-member-linkedin">LinkedIn</a>
+      </div>
+
+      <!-- Membro 4 -->
+      <div class="team-member">
+        <img src="../../assets/1621337638445.jpg" alt="Foto de Membro 4" class="team-member-photo">
+        <h3 class="team-member-name">Dielder Leal</h3>
+        <a href="https://www.linkedin.com/in/dielder-leal/" class="team-member-linkedin">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
 </ion-content>
