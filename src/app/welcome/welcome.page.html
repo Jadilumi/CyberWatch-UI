@@ -6,8 +6,8 @@
 
     <ion-title style="text-align: center; margin-left: 100px;">CyberWatch</ion-title>
     <ion-buttons slot="end">
-      <ion-button href="/dashboard">Dashboard</ion-button>
-      <ion-button href="/denuncia">Denuncias</ion-button>
+      <ion-item routerLink="/dashboard" routerDirection="root" [routerLinkActive]="'active'">Monitoramento</ion-item>
+        <ion-item routerLink="/denuncia" routerDirection="root" [routerLinkActive]="'active'">Denúncia</ion-item>
 
     </ion-buttons>
   </ion-toolbar>
@@ -28,7 +28,7 @@
         <ion-col size="12" size-md="6">
           <h2>Sobre o Projeto</h2>
           <p>O CyberWatch é uma plataforma inovadora dedicada a identificar e combater o bullying, especialmente no
-            ambiente escolar. Nosso objetivo é criar um espaço seguro onde denúncias de bullying possam ser feitas de
+            ambientes educacionais. Nosso objetivo é criar um espaço seguro onde denúncias de bullying possam ser feitas de
             forma rápida e anônima, permitindo uma ação rápida e eficaz.</p>
           <p>Queremos transformar escolas em locais mais seguros e acolhedores para todos os alunos. Acreditamos que,
             através da conscientização e da ação, podemos reduzir significativamente os casos de bullying e ajudar as

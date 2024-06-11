@@ -6,9 +6,10 @@
 
     <ion-title class="dashboard-title" style="text-align: center; margin-left: 100px;">Denuncia</ion-title>
 
-    <ion-buttons slot="end">      
-      <ion-button href="/welcome">Home</ion-button>
-      <ion-button href="/dashboard">Dashboard</ion-button>
+    <ion-buttons slot="end" style="margin-right: 20px;">
+      <ion-item routerLink="/dashboard" routerDirection="root" [routerLinkActive]="'active'"  style="margin-right: 32px;">Monitoramento</ion-item>
+        <ion-item routerLink="/denuncia" routerDirection="root" [routerLinkActive]="'active'" >Denuncia</ion-item>
+
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
