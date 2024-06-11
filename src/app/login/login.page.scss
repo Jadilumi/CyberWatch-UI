@@ -1,7 +1,9 @@
+/* Background */
 .background {
   position: relative;
 }
 
+/* Right Image */
 .image-right {
   position: absolute;
   top: 0;
@@ -12,15 +14,18 @@
   z-index: -1;
 }
 
+/* Input color */
 .cor-input {
-color: #000;
+  color: #000;
 }
 
+/* Ion Content */
 ion-content {
   overflow: hidden;
   --background: #ffffff;
 }
 
+/* Header */
 #header {
   display: flex;
   flex-direction: column;
@@ -33,7 +38,7 @@ ion-content {
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
-  margin-left: 120px;
+  margin-left: 120px  ;
 }
 
 #header h1 {
@@ -43,8 +48,10 @@ ion-content {
   margin-left: 200px;
 }
 
+/* Form */
 #form {
   width: 35%;
+  margin: 1 auto;
 }
 
 ion-input input {
@@ -55,59 +62,34 @@ ion-input label {
   font-size: 16px;
 }
 
+/* Button */
 ion-button {
   margin-top: 20px;
   height: 60px;
-  width: 100px;
+  width: 20%;
   font-size: 18px;
   text-transform: initial;
-  border-radius: 50%;
+  border-radius: 50px;
   --box-shadow: none;
 }
 
+/* Forgot Password Link */
 .esqueceu-link {
-  position: absolute;
+  display: block;
   margin-top: 40px;
-  left: 500px;
+  text-align: end;
   font-size: 16px;
 }
 
+/* Register Link */
 .register-link {
-  position: relative;
-  margin-top: 130px;
-  margin-left: 140px;
+  display: block;
+  margin-top: 30px;
+  text-align: start;
   font-size: 16px;
 }
 
-@media (min-width: 1920px) and (min-height: 1080px) {
-
-
-  #header img {
-    margin-left: 50px;
-  }
-
-  #header h1 {
-    margin-top: 10px;
-    margin-left: 150px;
-  }
-
-  .esqueceu-link {
-    position: relative;
-    margin-left: 100px;
-  }
-
-  .register-link {
-    position: relative;
-    margin-top: 109px;
-    margin-left: 72px;
-  }
-
-  .image-right {
-    height: 100%;
-  }
-}
-
-@media (max-width: 1280px) {
+@media (max-width: 1280px)  {
   #form{
     width: 45%;
   }
@@ -117,7 +99,7 @@ ion-button {
   }
 
   #header h1 {
-    margin-left:150px;
+    margin-left:200px;
   }
 
 
@@ -126,30 +108,30 @@ ion-button {
   }
 
   .register-link {
-    margin-top: 109px;
+    margin-top: 20px;
     margin-left: 100px;
   }
 }
 
 @media (max-width: 767px) {
-
   #header {
     align-items: center;
     margin-left: 0;
-    margin-top: 120px;
+    margin-top: 60px;
   }
 
   #header img {
-    margin-left: 20px;
+    margin-left: 0;
   }
 
   #header h1 {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 0;
+    text-align: center;
   }
 
   #form {
-    width: 80%;
+    width: 90%;
   }
 
   .image-right {
@@ -157,13 +139,14 @@ ion-button {
   }
 
   .esqueceu-link {
-    position: absolute;
-    margin-left: -350px;
-    margin-top: 120px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 0;
   }
 
   .register-link {
-    position: relative;
-    right: 40px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 0;
   }
 }
